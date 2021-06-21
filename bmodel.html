@@ -168,6 +168,21 @@
           </div>
      </footer>
      <script>
+           const more = document.querySelector('.continue');
+          const less = document.querySelector('.less');
+          const hide = document.querySelector('.hide');          
+          more.addEventListener('click', function(){
+               more.style.display = 'none';
+               hide.classList.add('show');
+               less.style.display = 'block';
+          });
+          
+          less.addEventListener('click', function(){
+               hide.classList.remove('show');
+               less.style.display = 'none';
+               more.style.display = 'block';
+          })
+
           const aside = document.querySelector('.aside');
           const main = document.querySelector('.main');
           const close = document.querySelector('.close');
